@@ -1,0 +1,70 @@
+body{
+  margin: 20px;
+  height: 800px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#8BC6EC , #9599E2);
+}
+
+.card-true{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font-size: large;
+  animation: rotateY-anim 1.5s;
+}
+.card-false{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font-size: large;
+}
+.card-completed{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(30, 139, 182);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font-size: large;
+  animation: completed 1s infinite;
+}
+
+.cards-container{
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-gap: 40px;
+}
+
+@keyframes rotateY-anim {
+	0% {
+		transform: rotateY(180deg);
+	}
+
+	100% {
+		transform: rotateY(360deg);
+	}
+}
+
+@keyframes completed {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(3px, 3px) rotate(3deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-3px, 3px) rotate(-3deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
